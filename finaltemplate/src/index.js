@@ -14,6 +14,7 @@ const renderApp = Component => {
     <Provider store={store}>
       <HashRouter>
         <Component />
+        
       </HashRouter>
     </Provider>,
     rootElement
