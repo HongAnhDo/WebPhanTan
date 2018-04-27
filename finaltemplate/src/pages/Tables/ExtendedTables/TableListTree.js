@@ -56,8 +56,6 @@ class TableListTree extends Component {
   render() {
     let { items} = this.state;
     return (
-<<<<<<< HEAD
-
       <div>
         <div style={{ width: '100%', height: '50px' }}>
 

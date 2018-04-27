@@ -4,7 +4,7 @@ import firebase from '../../../data/Firebase'
 let listHistoryWaterTree = [];
 
 
-class TableHistoryWaterTree extends Component {
+class TableHistoryWaterPeople extends Component {
 
   constructor(props) {
     super(props);
@@ -23,7 +23,7 @@ class TableHistoryWaterTree extends Component {
   };
 
   onClick (){
-    this.firebaseRef = firebase.database().ref().child('LichSuTuoiCayTheoCay').child(this.state.value);
+    this.firebaseRef = firebase.database().ref().child('LichSuTuoiCayTheoNguoiTuoi').child(this.state.value);
     this.firebaseCallback = this.firebaseRef.on('value', (snap) => {
       if (snap != null) {
         const item = snap.val();
@@ -69,14 +69,14 @@ class TableHistoryWaterTree extends Component {
       <div>
         <div style={{ width: '100%', height: '50px' }}>
 
-          <h4 style={{ float: "left" }}>Danh sách lịch sử tưới cây</h4>
+          <h4 style={{ float: "left", color:'blue', fontWeight:450 }}>Danh sách lịch sử tưới cây theo người tưới</h4>
           <div style={{ float: "right", width: "40%", display: "inline" }}>
            
               <label>
-               Mã cây:
+              Người tưới:
           <input type="text" value={this.state.value} onChange={this.handleChange.bind(this)} />
               </label>
-              <button type="button" className="btn btn-wd btn-success" style={{ width: '100px', height: '30px' , marginLeft:'6px'}} onClick = {this.onClick.bind(this)}>Search</button>
+              <button type="button" className="btn btn-wd btn-success" title ="Search" style={{ width: '100px', height: '30px' , marginLeft:'6px'}} onClick = {this.onClick.bind(this)}>Search</button>
            
           </div>
 
@@ -87,22 +87,21 @@ class TableHistoryWaterTree extends Component {
             <thead>
               <tr>
                 <th>Lượng nước tưới</th>
-                <th>Mã người tưới</th>
-                <th>Ngày giờ tưới</th>
-                <th>Tên người tưới</th>
-                <th>Vai trò người tưới</th>
+                <th>Mã cây tưới</th>
+                <th>Tên cây tưới</th>
+                <th>Thời gian tưới</th>
+                <th className="text-right">Xóa</th>
 
               </tr>
             </thead>
             <tbody>
               {items.map(item => (
-                <tr key={item.maNguoiTuoi}>
+                <tr key={item.thoiGianTuoi}>
                   <td>{item.luongNuocTuoi}</td>
-                  <td>{item.ngayGioTuoi}</td>
-                  <td>{item.tenNguoiTuoi}</td>
-                  <td >{item.diaDiem}</td>
-                  <td className="text-right">{item.vaiTroNguoiToi}</td>
-
+                  <td>{item.maCayTuoi}</td>
+                  <td>{item.tenCayTuoi}</td>
+                  <td >{item.thoiGianTuoi}</td>
+          
 
                   <td className="text-right">
                     <a rel="tooltip"
@@ -123,4 +122,4 @@ class TableHistoryWaterTree extends Component {
   }
 }
 
-export default TableHistoryWaterTree;
+export default TableHistoryWaterPeople;

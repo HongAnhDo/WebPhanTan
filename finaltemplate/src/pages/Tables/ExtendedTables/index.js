@@ -11,11 +11,6 @@ const ExtendedTables = () => (
       
       </div>
 
-      <div className="col-md-6" style = {{width: '100%'}}>
-        <TableHistoryWaterTree />
-      
-      </div>
-      
     </div>
   </div>
   

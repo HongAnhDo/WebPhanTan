@@ -7,7 +7,7 @@ import TableHistoryWaterTree from './ExtendedTables';
 const Tables = ({match}) => (
   <div className="content">
     <Route path={`${match.url}/list-tree`} component={TableListTree} />
-    <Route path={`${match.url}/history-water-tree`} component={TableHistoryWaterTree} />
+    {/* <Route path={`${match.url}/history-water-tree`} component={TableHistoryWaterTree} /> */}
   </div>
 );
 

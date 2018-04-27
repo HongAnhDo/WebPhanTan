@@ -84,7 +84,7 @@ class Nav extends Component {
         </li>
         <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
          
-            <Link to="/tables/history-water-tree">
+            <Link to="/TableHistoryWaterTree">
             <p>Lịch sử tưới cây theo cây </p>
             </Link>
           
@@ -92,7 +92,7 @@ class Nav extends Component {
 
         <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
          
-            <Link to="/tables/history-water-tree-user">
+            <Link to="/TableHistoryWaterPeople">
             <p>Lịch sử tưới cây theo người tưới cây </p>
             </Link>
           
@@ -128,4 +128,4 @@ class Nav extends Component {
   }
 }
 
-export default withRouter(Nav);
+  export default withRouter(Nav);
