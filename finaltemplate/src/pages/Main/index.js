@@ -27,6 +27,7 @@ const Main = ({
   mobileNavVisibility,
   hideMobileMenu,
   history
+ 
 }) => {
   // history.listen(() => {
   //   if (mobileNavVisibility === true) {
