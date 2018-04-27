@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { GoogleMap, withGoogleMap , Marker} from 'react-google-maps';
+import { GoogleMap, withGoogleMap, Marker } from 'react-google-maps';
 import firebase from '../../data/Firebase'
 let listTree = [];
 
@@ -8,7 +8,8 @@ class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listTree:[]
+      listTree: [],
+      location: this.props.location
     }
   };
 
@@ -29,15 +30,25 @@ class Map extends Component {
 
 
   render() {
-    const { location } = this.props.location;
-    const{listTree} = this.state.listTree;
+
     return (
       <div>
         <GoogleMap
           defaultZoom={17}
-          defaultCenter={{ lat: location.latitude, lng: location.longitude }}
+          defaultCenter={{ lat: this.state.location.latitude, lng: this.state.location.longitude }}
         >
-       {this.props.location && <Marker />}
+          {this.state.listTree.map((a, i) => {
+            {/* let lat = parseFloat(a.lat.replace('"', '').replace('"', ''));
+            let lon = parseFloat(a.lon.replace('"', '').replace('"', '')); */}
+            console.log("////////////////////////////////////"+ a)
+           
+            {/* return (
+              <Marker key={i}
+                position={{ lat: 0, lng: 0 }}
+                defaultAnimation={2}
+              />
+            ) */}
+          })}
 
         </GoogleMap>
       </div>
