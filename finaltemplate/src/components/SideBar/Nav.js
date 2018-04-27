@@ -68,8 +68,8 @@ class Nav extends Component {
                 <li className={this.isPathActive('/forms/extended-forms') ? 'active' : null}>
                   <Link to="/forms/extended-forms">Extended Forms</Link>
                 </li>
-                <li className={this.isPathActive('/forms/validation-forms') ? 'active' : null}>
-                  <Link to="/forms/validation-forms">Validation Forms</Link>
+                <li className={this.isPathActive('/forms/add-tree') ? 'active' : null}>
+                  <Link to="/forms/add-tree">Validation Forms</Link>
                 </li>
               </ul>
             </div>

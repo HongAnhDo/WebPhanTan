@@ -10,10 +10,11 @@ import Footer from './Footer';
 import SideBar from '../../components/SideBar';
 import ThemeOptions from '../../components/ThemeOptions';
 import MobileMenu from '../../components/MobileMenu';
+import backgroundImage from './sidebar5.jpg'
 /**
  * Pages
  */
-import MapTree from '../map/MapTree';
+import MapTree from '../MapsPage/MapTree';
 import Components from '../Components';
 import UserProfile from '../UserProfile';
 import MapsPage from '../MapsPage';
@@ -38,7 +39,7 @@ const Main = ({
 
       <div className="main_page" style = {{backgroundColor:"#494949", height: "100%", width: "100%", display:'inline'}}>
         {/* <div className="close-layer" onClick={hideMobileMenu}></div> */}
-        <SideBar style ={{float: 'left', height:'100%'}}/>
+        <SideBar style ={{float: 'left', height:'100%', backgroundImage: 'url(' + backgroundImage + ')'}}/>
 
         <div className="main-panel" style ={{float: 'left', width: widthView + 'px', height:'100%'}}>
           <Header />
