@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import generateData from '../generateData';
 import firebase from '../../../data/Firebase'
-let listTree = [];
+let listHistoryWaterTree = [];
 
 
-class TableListTree extends Component {
+class TableHistoryWaterTree extends Component {
 
   componentDidMount() {
-    this.firebaseRef = firebase.database().ref().child('trees');
+    this.firebaseRef = firebase.database().ref().child('LichSuTuoiCayTheoCay');
     this.firebaseCallback = this.firebaseRef.on('value', (snap) => {
       if (snap != null) {
         const item = snap.val();
@@ -28,7 +28,7 @@ class TableListTree extends Component {
 
   };
   state = {
-    items: listTree
+    items: listHistoryWaterTree
   };
 
   deleteItem = itemId => {
@@ -51,30 +51,29 @@ class TableListTree extends Component {
           <table className="table table-hover table-striped">
             <thead>
               <tr>
-                <th style={{ width: '7%' }}>Mã cây</th>
-                <th>Tên cây</th>
-                <th>Loại cây</th>
-                <th >Địa điểm</th>
-                <th className="text-right">Lượng nước max</th>
-                <th className="text-right">Trạng thái</th>
-                <th className="text-right">Actions</th>
+                <th>Lượng nước tưới</th>
+                <th>Mã người tưới</th>
+                <th>Ngày giờ tưới</th>
+                <th>Tên người tưới</th>
+                <th>Vai trò người tưới</th>
+               
               </tr>
             </thead>
             <tbody>
               {items.map(item => (
-                <tr key={item.maCay}>
-                  <td>{item.maCay}</td>
-                  <td>{item.tenCay}</td>
-                  <td>{item.loaiCay}</td>
+                <tr key={item.maNguoiTuoi}>
+                  <td>{item.luongNuocTuoi}</td>
+                  <td>{item.ngayGioTuoi}</td>
+                  <td>{item.tenNguoiTuoi}</td>
                   <td >{item.diaDiem}</td>
-                  <td className="text-right">{item.luongNuocMax}</td>
-                  <td className="text-right">{item.trangThai}</td>
+                  <td className="text-right">{item.vaiTroNguoiTuoi}</td>
+                  
 
                   <td className="text-right">
                     <a rel="tooltip"
                       className="btn btn-info btn-simple btn-xs"
                       data-original-title="View Profile"
-                      onClick={() => this.deleteItem(item.maCay)}>
+                      onClick={() => this.deleteItem(item.maNguoiTuoi)}>
                       <i className="fa fa-remove"></i>
                     </a>
                   </td>
@@ -89,4 +88,4 @@ class TableListTree extends Component {
   }
 }
 
-export default TableListTree;
+export default TableHistoryWaterTree;

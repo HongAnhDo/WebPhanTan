@@ -82,6 +82,42 @@ class Nav extends Component {
             </Link>
           
         </li>
+        <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
+         
+            <Link to="/tables/history-water-tree">
+            <p>Lịch sử tưới cây theo cây </p>
+            </Link>
+          
+        </li>
+
+        <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
+         
+            <Link to="/tables/history-water-tree-user">
+            <p>Lịch sử tưới cây theo người tưới cây </p>
+            </Link>
+          
+        </li>
+
+        <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
+         
+            <Link to="/tables/history-water-tree">
+            <p>Quản lý user</p>
+            </Link>
+        </li>
+
+        <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
+         
+            <Link to="/tables/history-water-tree">
+            <p>Quản lý nguồn nước</p>
+            </Link>
+        </li>
+
+        <li className={this.isPathActive('/tablehistory') || this.state.tableMenuOpen ? 'active' : null}>
+         
+            <Link to="/tables/history-water-tree">
+            <p>Quản lý sensor </p>
+            </Link>
+        </li>
         
       </ul>
     );
