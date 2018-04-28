@@ -4,6 +4,7 @@ import RegularForms from './RegularForms';
 import ExtendedForms from './ExtendedForms';
 import AddTreeForms from './AddTreeForms';
 import firebase from '../../data/Firebase'
+import AddSensorForms from './AddSensorForms'
 
 class Forms extends Component {
   constructor(props){
@@ -21,6 +22,13 @@ class Forms extends Component {
             return <AddTreeForms {...props} onSubmit={values => {
               this.ref = firebase.database().ref().child('trees');
               this.ref.child(values.maCay).set(values);
+
+              alert ("Susccess");
+            }} />
+          }} />
+          <Route path={`${this.props.match.url}/add-sensor`} render={props => {
+            return <AddSensorForms {...props} onSubmit={values => {
+             
 
               alert ("Susccess");
             }} />

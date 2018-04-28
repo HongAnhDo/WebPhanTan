@@ -4,7 +4,6 @@ import firebase from '../../../data/Firebase'
 import renderField from 'components/FormInputs/renderField';
 import _ from 'lodash';
 
-import SelectSensor from './SelectSensor'
 
 
 const required = value => value ? undefined : 'Required';

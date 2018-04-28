@@ -6,6 +6,11 @@ import { setMobileNavVisibility } from '../../reducers/Layout';
 import { withRouter } from 'react-router-dom';
 import TableHistoryWaterTree from '../Tables/ExtendedTables/TableHistoryWaterTree'
 import TableHistoryWaterPeople from '../Tables/ExtendedTables/TableHistoryWaterPeople'
+import TableListSensor from '../Tables/ExtendedTables/TableSensor'
+import TableListWater from '../Tables/ExtendedTables/TableListWater'
+import TableListUser from '../Tables/ExtendedTables/TableUser'
+import TableReport from '../Tables/ExtendedTables/TableReport'
+
 import Header from './Header';
 import Footer from './Footer';
 import SideBar from '../../components/SideBar';
@@ -23,6 +28,7 @@ import Forms from '../Forms';
 import Charts from '../Charts';
 import Calendar from '../Calendar';
 import Tables from '../Tables';
+
 const widthView = window.innerWidth - 200;
 
 const Main = ({
@@ -53,8 +59,11 @@ const Main = ({
         <Route path="/charts" component={Charts} />
         <Route path="/calendar" component={Calendar} />
         <Route path="/TableHistoryWaterTree" component={TableHistoryWaterTree} />
-
         <Route path="/TableHistoryWaterPeople" component={TableHistoryWaterPeople} />
+        <Route path="/TableListSensor" component={TableListSensor} />
+        <Route path ='/TableListWater' component ={TableListWater}/>
+        <Route path ='/TableListUser' component ={TableListUser}/>
+        <Route path ='/TableReport' component ={TableReport}/>
       </div>
     </div>
 

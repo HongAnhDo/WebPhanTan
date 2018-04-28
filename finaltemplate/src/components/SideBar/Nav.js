@@ -14,10 +14,10 @@ class Nav extends Component {
         <li className={location.pathname === '/' ? 'active' : null}>
           <Link to="/">
             <i className="pe-7s-graph"></i>
-            <p>Bản đồ</p>
+            <p style ={{fontWeight:500}} >Bản đồ</p>
           </Link>
         </li>
-        <li className={this.isPathActive('/components') || this.state.componentMenuOpen ? 'active' : null}>
+        {/* <li className={this.isPathActive('/components') || this.state.componentMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ componentMenuOpen: !this.state.componentMenuOpen })}
             data-toggle="collapse">
             <i className="pe-7s-plugin"></i>
@@ -53,8 +53,8 @@ class Nav extends Component {
               </ul>
             </div>
           </Collapse>
-        </li>
-        <li className={this.isPathActive('/forms') || this.state.formMenuOpen ? 'active' : null}>
+        </li> */}
+        {/* <li className={this.isPathActive('/forms') || this.state.formMenuOpen ? 'active' : null}>
           <a onClick={() => this.setState({ formMenuOpen: !this.state.formMenuOpen })} data-toggle="collapse">
             <i className="pe-7s-note2"></i>
             <p>Forms <b className="caret"></b></p>
@@ -74,18 +74,18 @@ class Nav extends Component {
               </ul>
             </div>
           </Collapse>
-        </li>
+        </li> */}
         <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
          
             <Link to="/tables/list-tree">
-            <p>Quản lý cây </p>
+            <p style ={{fontWeight:500}}>Quản lý cây </p>
             </Link>
           
         </li>
         <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
          
             <Link to="/TableHistoryWaterTree">
-            <p>Lịch sử tưới cây theo cây </p>
+            <p style ={{fontWeight:500}}>Lịch sử người tưới cây </p>
             </Link>
           
         </li>
@@ -93,29 +93,36 @@ class Nav extends Component {
         <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
          
             <Link to="/TableHistoryWaterPeople">
-            <p>Lịch sử tưới cây theo người tưới cây </p>
+            <p style ={{fontWeight:500}}>Lịch sử cây tưới </p>
             </Link>
           
         </li>
 
         <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
          
-            <Link to="/tables/history-water-tree">
-            <p>Quản lý user</p>
+            <Link to="/TableListUser">
+            <p style ={{fontWeight:500}}>Quản lý user</p>
             </Link>
         </li>
 
         <li className={this.isPathActive('/tables') || this.state.tableMenuOpen ? 'active' : null}>
          
-            <Link to="/tables/history-water-tree">
-            <p>Quản lý nguồn nước</p>
+            <Link to="/TableListWater">
+            <p style ={{fontWeight:500}}>Quản lý nguồn nước</p>
             </Link>
         </li>
 
         <li className={this.isPathActive('/tablehistory') || this.state.tableMenuOpen ? 'active' : null}>
          
-            <Link to="/tables/history-water-tree">
-            <p>Quản lý sensor </p>
+            <Link to="/TableListSensor">
+            <p style ={{fontWeight:500}}>Quản lý sensor </p>
+            </Link>
+        </li>
+        
+        <li className={this.isPathActive('/table') || this.state.tableMenuOpen ? 'active' : null}>
+         
+            <Link to="/TableReport">
+            <p style ={{fontWeight:500}}>Quản lý report </p>
             </Link>
         </li>
         
