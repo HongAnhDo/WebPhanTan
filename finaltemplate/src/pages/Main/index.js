@@ -10,6 +10,7 @@ import TableListSensor from '../Tables/ExtendedTables/TableSensor'
 import TableListWater from '../Tables/ExtendedTables/TableListWater'
 import TableListUser from '../Tables/ExtendedTables/TableUser'
 import TableReport from '../Tables/ExtendedTables/TableReport'
+import Login from '../Tables/ExtendedTables/Login'
 
 import Header from './Header';
 import Footer from './Footer';
@@ -64,6 +65,8 @@ const Main = ({
         <Route path ='/TableListWater' component ={TableListWater}/>
         <Route path ='/TableListUser' component ={TableListUser}/>
         <Route path ='/TableReport' component ={TableReport}/>
+        <Route path ='/login' component ={Login}/>
+
       </div>
     </div>
 

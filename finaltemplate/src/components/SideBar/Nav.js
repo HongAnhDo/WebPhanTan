@@ -125,6 +125,12 @@ class Nav extends Component {
             <p style ={{fontWeight:500}}>Quản lý report </p>
             </Link>
         </li>
+        <li className={this.isPathActive('/table') || this.state.tableMenuOpen ? 'active' : null}>
+         
+            <Link to="/login">
+            <p style ={{fontWeight:500}}>Login </p>
+            </Link>
+        </li>
         
       </ul>
     );
